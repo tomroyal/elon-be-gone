@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Elon Be Gone",
+  "description": "Replaces Elon Musk with a guinea pig, because what's not to like about guinea pigs I guess?",
+  "version": "1.0.0",
+  "options_page": "makaoptions.html",
+
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": { "48": "maka48.png",
+          "128": "maka128.png" },        
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.3.1.min.js","maka.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "kittens/1.jpg"],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}
